@@ -1,17 +1,25 @@
 package jp.co.sample.domain;
 
 /**
- * 洋服店の情報を表すドメイン
+ * 洋服店の情報を表すドメイン.
+ * 
  * @author momo.senda
  *
  */
 public class ClothesShop {
+	/**洋服のid*/
 	private Integer id;
+	/**カテゴリー*/
 	private String category;
+	/**ジャンル*/
 	private String genre;
+	/**性別*/
 	private Integer gender;
+	/**色*/
 	private String color;
+	/**値段*/
 	private Integer price;
+	/**サイズ*/
 	private String size;
 	
 	

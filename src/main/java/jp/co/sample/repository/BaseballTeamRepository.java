@@ -12,6 +12,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import jp.co.sample.domain.BaseballTeam;
 
+/**
+ * 野球チームの詳細情報を表示するリポジトリ
+ * @author momo.senda
+ *
+ */
 @Repository
 @Transactional
 public class BaseballTeamRepository {
@@ -29,6 +34,12 @@ public class BaseballTeamRepository {
 		return baseball;
 	};
 
+	/**
+	 * 野球チームを1つ検索する
+	 * 
+	 * @param id　Id
+	 * @return　野球チームの名前
+	 */
 	public BaseballTeam load(Integer id) {
 		String sql = "SELECT id, league_name,team_name,headquarters,inauguration,history "
 				+ "FROM baseball_teams WHERE id=:id";
@@ -41,6 +52,11 @@ public class BaseballTeamRepository {
 
 	}
 
+	/**
+	 * 
+	 * 該当の野球チームの情報をすべて表示する
+	 * @return　野球チームんの詳細
+	 */
 	public List<BaseballTeam> findAll() {
 		String sql = "SELECT id, league_name,team_name,headquarters,inauguration,history FROM baseball_teams ORDER BY team_name";
 

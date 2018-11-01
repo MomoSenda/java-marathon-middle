@@ -39,7 +39,7 @@ public class HotelController {
 	 * 検索結果を表示する
 	 * 
 	 * @param model モデル
-	 * @return
+	 * @return 検索画面
 	 */
 	@RequestMapping("/hotelSearch")
 	public String list(int price,Model model) {

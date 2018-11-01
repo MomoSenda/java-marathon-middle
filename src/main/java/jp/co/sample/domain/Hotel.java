@@ -7,12 +7,19 @@ package jp.co.sample.domain;
  *
  */
 public class Hotel {
+	/**id*/
 	private Integer id;
+	/**エリア*/
 	private String areaName;
+	/**ホテル名*/
 	private String hotelName;
+	/**住所*/
 	private String address;
+	/**最寄り駅*/
 	private String nearestStation;
+	/**値段*/
 	private Integer price;
+	/**駐車場*/
 	private String parking;
 
 	@Override

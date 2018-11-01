@@ -32,7 +32,7 @@ public class HotelRepository {
 	};
 
 	public List<Hotel> findByCheaperPrice(int price) {
-		String sql = "SELECT id,area_name,hotel_name,address,nearest_station,price,parking FROM hotels WHERE price<=:price";
+		String sql = "SELECT id,area_name,hotel_name,address,nearest_station,price,parking FROM hotels WHERE price<=:price ORDER BY hotel_name";
 
 		SqlParameterSource param = new MapSqlParameterSource().addValue("price", price);
 
